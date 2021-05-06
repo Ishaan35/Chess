@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; 
+    overflow-x: hidden; 
+  
+  }
+
+.Header{
+    background-color: #3b3b3b;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;    color: whitesmoke;
+    font-weight: 100;
+    
+}
+
+.headerTitle{
+    font-size: xx-large;
+}
+.LinkItem{
+    display: inline-block;
+    padding-left: 20vh;
+    font-family: 'Montserrat', sans-serif;    color: whitesmoke;
+    color: lightgrey;
+    height: 100%;
+    font-size: larger;
+    transition: .2s;
+}
+.LinkItem:hover{
+    color: gray;
+    transition: .2s;
+}
+
+.fileLetter{
+    font-size: large;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;    color: rgb(162, 105, 32);
+    margin-left: 5%;
+}
+.rankNumber{
+    font-size: large;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;    color: rgb(162, 105, 32);
+    float: left;
+    margin-top: -9%;
+    margin-left: -6%;
+}
+
+#Board{
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid grey;
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+}
+.Container{
+    display: block;
+    height: 40vw;
+    width: 40vw;
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top:5vh;
+    overflow: visible;
+}
+.CapturedPiecesContainer{
+    display: block;
+    height: 20vw;
+    width: 40vw;
+    margin: auto;
+    position: relative;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.WhitePiecesCaptured{
+    float: left;
+    width: 40%;
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+.BlackPiecesCaptured{
+    float: right;
+    width: 40%;
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+.blackSquare{
+    width: 12.5%;
+    height: 12.5%;
+    background-color: #d99d43;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.whiteSquare{
+    width: 12.5%;
+    height: 12.5%;
+    background-color: #ffe3b8;
+    display: inline-block;
+}
+
+.tint{
+    width: 12.5%;
+    height: 12.5%;
+    display: inline-block;
+    background-image: url("images/Tint.png");
+}
+
+.moveIndicator{
+    width: 12.5%;
+    height: 12.5%;
+    display: inline-block;
+    background-image: url("images/MoveIndicator.png");
+}
+
+.kingInCheck{
+    width: 12.5%;
+    height: 12.5%;
+    display: inline-block;
+    background-image: url("images/KingInCheck.png");
+}
+
+@keyframes PopUp {
+
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 10%;}
+  }
+
+/*popup*/
+#PopUp{
+    
+    top: 10%;
+    width: 30vw;
+    height: auto;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #f2f2f2;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
+    animation-name: PopUp;
+    animation-duration: 1s;
+
+}
+.PopUpHeader{
+    position: relative; 
+    background-color: #51b035; 
+    height: auto; 
+    padding: 5%;
+    color: white; 
+    width: 100%; 
+    text-align: center;
+}
+.PopUpBody{
+    position: relative; 
+    display: block;
+    color: white; 
+    height: auto; 
+
+    text-align: center;
+}
+.PopUpText{
+    color: white; 
+    position: relative; 
+    top: 20%;
+    font-family: 'Montserrat', sans-serif;}
+.PopUpBodyText{
+    color: #a5a5a5; 
+    position: relative; 
+    top: 20%;
+    font-family: 'Montserrat', sans-serif;}
+
+.ChooseSideButton{
+    background-color: #51b035;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    margin-top: 10px;
+    transition: 0.2s;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.ChooseSideButton:hover{
+    background-color: #2f711b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.ChooseSideButton:active{
+    transform: scale(0.95);
+}
+
+.DifficultyButton{
+    background-color: #51b035;
+}
+.DifficultyButton:focus:hover{
+    background-color: #446fd1;
+}
+.DifficultyButton:focus{
+    background-color: #5286ff;
+}
+
+
+
+/*Pawn promotion*/
+#Promotion{
+    font-size: 0;
+    top: 15%;
+    width: 20vw;
+    height: 5vw;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
+    
+}
+.PromotionOptions{
+    font-size: 0;
+    height: 100%;
+    width: 25%;
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.buttonsContainer{
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 75%;
+    padding-top: 25px;
+
+}
+.resignButton{
+    width: auto; 
+    background-color: #fd3e30;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+
+}
+.resignButton:hover{
+    background-color: #d12b1f;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.resignButton:active{
+    transform: scale(0.95);
+}
+
+
+.drawButton{
+    width: auto; 
+    background-color: #797979;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s;
+}
+.drawButton:hover{
+    background-color: #5e5e5e;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.drawButton:active{
+    transform: scale(0.95);
+}
+
+.squareHover{
+    cursor: default;
+}
+.squareHover:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .Container{
+        width: 80vw;
+        height: 80vw;
+    }
+    .CapturedPiecesContainer{
+        width: 80vw;
+        height: 40vw;
+    }
+    #PopUp{
+        width: 60vw;
+    }
+    .resignButton{
+        font-size: small;
+    }
+    .drawButton{
+        font-size: small;
+    }
+
+    .LinkItem{
+        display: inline-flex;
+        padding-left: 3vh;
+        font-size: small;
+    }
+    .headerTitle{
+        font-size: x-large;
+    }
+    .PopUpBodyText{
+        font-size: large;
+    }
+    .PopUpText{
+        font-size: large;
+    }
+    #Promotion{
+        width: 40vw;
+        height: 10vw;
+    }
+}
+
+
+/*board themes*/
+.BrownThemeBlack{
+    background-color: #d99d43;
+}
+.BrownThemeWhite{
+    background-color: #ffe3b8;
+}
+
+.BlueThemeBlack{
+    background-color: #51aff3;
+}
+.BlueThemeWhite{
+    background-color: #b9e2ff;
+}
+
+.GreenThemeBlack{
+    background-color: #51b035;
+}
+.GreenThemeWhite{
+    background-color: #cfe2d2;
+}
+
+.brownButton{
+    background-color: #d99d43;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+    transition: 0.2s;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.blueButton{
+    background-color: #51aff3;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+    transition: 0.2s;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.greenButton{
+    background-color: #51b035;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+    transition: 0.2s;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.brownButton:focus, .blueButton:focus, .greenButton:focus{
+    border: 2px solid black;
+    transition: .2s;
+}

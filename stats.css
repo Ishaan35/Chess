@@ -1,0 +1,291 @@
+.dropdown{
+    padding-top: 15px;
+    height: 80vh;
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.selectedOption{
+    padding: 5px;
+    pointer-events: all;
+
+}
+
+.gameModes{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    pointer-events: none;
+}
+
+.gameModes ul{
+    position: absolute;
+    background: lightgray;
+    margin-top: 10px;
+    width: 200px;
+    overflow: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+
+    opacity: 0;
+    pointer-events: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.gameModes li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.gameModes li:hover{
+    background: rgb(236, 236, 236);
+    transition: .2s;
+    pointer-events: all;
+}
+.dropdown button{
+    background: none;
+    border: none;
+    color: rgb(83, 83, 83);
+    font-size: small;
+    cursor: pointer;
+    transition: .2s;
+}
+.dropdown button:hover{
+    color: black;
+    transition: .2s;
+}
+.gameModes button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+.subHeading{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(83, 83, 83);
+    padding: 5vh;
+}
+
+.playerList{
+    padding-top: 10vh;
+    pointer-events: none;
+    position: relative;
+    display: inline-flexbox;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    overflow: hidden;    
+}
+.playerItem{
+    width: 80%;
+    height: 8vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    display: flexbox;
+    margin: auto;
+    background: rgb(251, 251, 251);
+    overflow: visible;
+    pointer-events: all;
+    z-index: 11;
+    transition: .05s;
+}
+.playerItem:hover{
+    background: rgb(226, 226, 226);
+    transition: .1s;
+    cursor:pointer;
+}
+
+.playerItemRank{
+    display:inline-block;
+    vertical-align: middle;
+    padding-left: 3vw;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+.playerAvatar{
+    display:inline-block; 
+    vertical-align: middle;
+    height: 100%;
+    overflow: visible;
+    padding: 1vh;
+}
+
+.playerTitle{
+    display:inline-block;
+    vertical-align: middle;
+    margin-left: 3vw;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(38, 117, 187);
+}
+
+.playerTitleBlank{
+    display:inline-block;
+    vertical-align: middle;
+    margin-left: 3vw;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+}
+
+
+.userName{
+    display:inline-block;
+    vertical-align: middle;
+    padding-left: 1vw;
+    font-weight: 300;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(52, 72, 135);
+}
+
+.Rating{
+    display:inline-block;
+    vertical-align: middle;
+    padding-left: 1vw;
+    font-weight: 300;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: gray; 
+    font-size: small; 
+    margin-left: 5vw;
+    position: absolute;
+    left: 70%;
+    margin-top: 2vh;
+}
+
+.Country{
+    display:inline-block;
+    vertical-align: middle;
+    padding-left: 1vw;
+    font-weight: 300;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: navy; 
+    font-size: small; 
+    margin-left: 5vw;
+    position: absolute;
+    left: 40%;
+    margin-top: 2vh;
+}
+
+.lineSeparate{
+    color: gray; height: 0.5px; background: lightgrey; border: none; width: 75%; position: relative; margin: auto; 
+}
+
+.LoadingScreen{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(98, 98, 98, 0.551);
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes loading {
+    0%   {transform: rotate(-540deg);}
+    25% {border: 0.8vh solid white;}
+    50% {border: 0.8vh solid white; transform: rotate(-720deg);  background: white;}
+    75% {border: 0.8vh solid white; background: transparent;}
+    100% {border: 0.8vh solid white; }
+}
+
+@keyframes fade{
+    0% {opacity: 1; display: flex;}
+    100% {opacity: 0; display: none;}
+}
+
+
+.SquareLoad{
+
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+    width: 5vh;
+    height: 5vh;
+    background: transparent;
+    border: 0.8vh solid white;
+    position: absolute;
+}
+
+.fadeOut{
+    animation-name: fade;
+    animation-duration: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 1000px){
+    .playerItemRank{
+        font-size: x-small;
+    }
+    .playerAvatar{
+        display:inline-block; 
+        vertical-align: middle;
+        height: 75%;
+        overflow: visible;
+        margin-left: 0vw;
+    }
+    .userName{
+        font-size: x-small;
+    }
+    .playerTitle{
+        font-size: xx-small;
+        margin-left: 0;
+    }
+    .playerTitleBlank{
+        font-size: xx-small;
+        margin-left: 0;
+    }
+    .Rating{
+        font-size: xx-small;
+        margin-left: 1vw;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .Country{
+        display: none;
+    }
+}
+

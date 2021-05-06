@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stats.css">
+    <link rel="icon" href="Images/Icons/WebsiteIcon.png">
+
+</head>
+<body>
+    <header class="Header">
+        <h1 style="display: inline;" class="headerTitle">Chess</h1>
+        <a href="index.html" class="LinkItem"> Home </a>
+        <a href="stats.html" class="LinkItem"> Stats </a>
+    </header>
+
+    
+    <div class='LoadingScreen'>
+        <div class="SquareLoad">
+            
+        </div>
+    </div>
+
+    <h2 class="subHeading">Chess.com Global Statistics</h2>
+    <div class="dropdown">
+        <div class="gameModes">
+            <button class="selectedOption" style='font-size: large;'>Rapid<img src='Images/Icons/Dropdown.png' width='15px' style='padding-left: 5px'></button>
+            <ul>
+                <li><button onclick="changeMode('Rapid')">Rapid</button></li>
+                <li><button onclick="changeMode('Daily')">Daily</button></li>
+                <li><button onclick="changeMode('Daily 960')">Daily 960</button></li>
+                <li><button onclick="changeMode('Blitz')">Blitz</button></li>
+                <li><button onclick="changeMode('Bullet')">Bullet</button></li>
+                <li><button onclick="changeMode('King of the Hill')">King of the Hill</button></li>
+                <li><button onclick="changeMode('Crazyhouse')">Crazyhouse</button></li>
+                <li><button onclick="changeMode('3 Check')">3 Check</button></li>
+                <li><button onclick="changeMode('Bughouse')">Doubles (Bughouse)</button></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="playerList">
+        
+    </div>
+
+
+    <script src="Scripts/stats.js"></script>
+</body>
+</html>
