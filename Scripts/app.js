@@ -825,10 +825,11 @@ function makePopUp(event){
     let brownTheme = "<button onclick=setTheme('Brown') class='brownButton'></button>";
     let blueTheme = "<button onclick=setTheme('Blue') class='blueButton'></button>";
     let greenTheme = "<button onclick=setTheme('Green') class='greenButton'></button>";
+    let br = "<br>";
+    let viewBoard = "<button onclick=viewBoard() class='viewBoardButton' > View Board </button>";
 
 
-
-    let popUpBody = "<div class='PopUpBody'>" + popUpBodyText + whiteButton + blackButton + difficultyText + normal + tough + hard + themeText + brownTheme + blueTheme + greenTheme +  "</div>";
+    let popUpBody = "<div class='PopUpBody'>" + popUpBodyText + whiteButton + blackButton + difficultyText + normal + tough + hard + themeText + brownTheme + blueTheme + greenTheme +br + br + viewBoard+  "</div>";
 
 
     let popUp = "<div id='PopUp'>"+ popUpHeader + popUpBody +"</div>";
@@ -986,6 +987,7 @@ function sound(){
     snd.play();
     snd.currentTime=0;
 }
+
 function viewBoard(){
     let popUp = document.getElementById("PopUp");
     popUp.remove();
