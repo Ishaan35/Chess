@@ -12,7 +12,21 @@
     padding: 2%;
     font-family: 'Montserrat', sans-serif;    color: whitesmoke;
     font-weight: 100;
-    
+}
+
+.Footer{
+    background-color: #3b3b3b;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;    color: whitesmoke;
+    font-weight: 100;
+    margin-top: 50px;
+    bottom: 0;
+
+}
+.footerLink{
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
 }
 
 .headerTitle{
@@ -22,7 +36,7 @@
     display: inline-block;
     padding-left: 20vh;
     font-family: 'Montserrat', sans-serif;    color: whitesmoke;
-    color: lightgrey;
+    color: white;
     height: 100%;
     font-size: larger;
     transition: .2s;
@@ -114,21 +128,21 @@
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/Tint.png");
+    background-image: url("Images/Tint.png");
 }
 
 .moveIndicator{
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/MoveIndicator.png");
+    background-image: url("Images/MoveIndicator.png");
 }
 
 .kingInCheck{
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/KingInCheck.png");
+    background-image: url("Images/KingInCheck.png");
 }
 
 @keyframes PopUp {
@@ -316,6 +330,27 @@
     cursor: pointer;
 }
 
+.name{
+    float: right; font-weight: 300; font-size:larger; color: lightgray;
+    padding-top: 1.5vh;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    min-height: 11vh;
+    background-color: #3b3b3b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    vertical-align: middle;
+    z-index: 0;
+}
 @media screen and (max-width: 1000px){
     .Container{
         width: 80vw;
@@ -353,6 +388,18 @@
         width: 40vw;
         height: 10vw;
     }
+    .name{
+        font-size: medium;
+    }
+    .footer-links{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .footer-links{
+        width: 100%;
+    }
 }
 
 
@@ -377,6 +424,8 @@
 .GreenThemeWhite{
     background-color: #cfe2d2;
 }
+
+
 
 .brownButton{
     background-color: #d99d43;
@@ -417,6 +466,8 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+
 
 .brownButton:focus, .blueButton:focus, .greenButton:focus{
     border: 2px solid black;
