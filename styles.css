@@ -114,21 +114,21 @@
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/Tint.png");
+    background-image: url("Images/Tint.png");
 }
 
 .moveIndicator{
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/MoveIndicator.png");
+    background-image: url("Images/MoveIndicator.png");
 }
 
 .kingInCheck{
     width: 12.5%;
     height: 12.5%;
     display: inline-block;
-    background-image: url("images/KingInCheck.png");
+    background-image: url("Images/KingInCheck.png");
 }
 
 @keyframes PopUp {
