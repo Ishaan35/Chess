@@ -986,3 +986,7 @@ function sound(){
     snd.play();
     snd.currentTime=0;
 }
+function viewBoard(){
+    let popUp = document.getElementById("PopUp");
+    popUp.remove();
+}
