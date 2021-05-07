@@ -34,7 +34,7 @@
 }
 .LinkItem{
     display: inline-block;
-    padding-left: 20vh;
+    margin-left: 10vw;
     font-family: 'Montserrat', sans-serif;    color: whitesmoke;
     color: white;
     height: 100%;
@@ -296,7 +296,7 @@
 }
 
 .viewBoardButton{
-    background-color: #ed00f5;
+    background-color: rgb(255, 145, 0);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -309,6 +309,7 @@
     width: auto;
     float: right;
     margin-right: 5vw;
+    cursor: pointer;
 }
 
 
@@ -390,6 +391,7 @@ nav {
         display: inline-flex;
         padding-left: 3vh;
         font-size: small;
+        margin-left: 5vw;
     }
     .headerTitle{
         font-size: x-large;
