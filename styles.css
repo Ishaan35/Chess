@@ -295,6 +295,22 @@
     transform: scale(0.95);
 }
 
+.viewBoardButton{
+    background-color: #ed00f5;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    transition: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    width: auto;
+    float: right;
+    margin-right: 5vw;
+}
+
 
 .drawButton{
     width: auto; 
