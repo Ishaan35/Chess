@@ -64,6 +64,7 @@ function createBoard() {
     boardElement.innerHTML = boardHTML;
 
     makingPossibleMoves();
+    addToCapturedPieces();
     setTheme(theme)
 }
 function setTheme(t){
